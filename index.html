@@ -46,7 +46,8 @@
 </div>
 
 <script>
-	function autoPlayAudio1() {
+    (function autoPlayAudio1() {
+        alert("b");
         wx.config({
             // 配置信息, 即使不正确也能使用 wx.ready
             debug: false,
@@ -57,9 +58,10 @@
             jsApiList: []
         });
         wx.ready(function() {
+            alert("a");
             document.getElementById('bgmusic').play();
         });
-    }
+    })();
 </script>
 
 <script>
