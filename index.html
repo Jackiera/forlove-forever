@@ -39,7 +39,7 @@
             <a href="" target="_blank">张亚杰</a> 与 <a href="" target="_blank">宋晓璞</a> 在一起的
             <div id="clock"></div>
         </div>
-        <canvas id="canvas" width="1100" height="1000"></canvas>
+        <canvas id="canvas" width="1100" height="680"></canvas>
     </div>
     <audio id="bgmusic" src="love.mp3" autoplay preload="auto" loop></audio>
 </div>
@@ -100,7 +100,7 @@
 			bloom: {
 				num: 700,
 				width: 1080,
-				height: 970,
+				height: 650,
 			},
 			footer: {
 				width: 1200,
@@ -162,13 +162,13 @@
 		}));
 
 		var moveAnimate = eval(Jscex.compile("async", function () {
-			tree.snapshot("p1", 240, 0, 610, 1000);
+			tree.snapshot("p1", 240, 0, 610, 680);
 			while (tree.move("p1", 500, 0)) {
 				foot.draw();
 				$await(Jscex.Async.sleep(10));
 			}
 			foot.draw();
-			tree.snapshot("p2", 500, 0, 610, 1000);
+			tree.snapshot("p2", 500, 0, 610, 680);
 
 			// 会有闪烁不得意这样做, (＞﹏＜)
 			canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
