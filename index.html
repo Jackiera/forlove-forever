@@ -162,13 +162,13 @@
 		}));
 
 		var moveAnimate = eval(Jscex.compile("async", function () {
-			tree.snapshot("p1", 240, 0, 610, 680);
+			tree.snapshot("p1", 240, 0, 610, 1000);
 			while (tree.move("p1", 500, 0)) {
 				foot.draw();
 				$await(Jscex.Async.sleep(10));
 			}
 			foot.draw();
-			tree.snapshot("p2", 500, 0, 610, 680);
+			tree.snapshot("p2", 500, 0, 610, 1000);
 
 			// 会有闪烁不得意这样做, (＞﹏＜)
 			canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
